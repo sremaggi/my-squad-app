@@ -1,101 +1,61 @@
-import Image from "next/image";
-
+// src/app/page.js
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <h1>Home Page</h1>
+      <p>Welcome to the home page! </p>
+      <p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eu metus fermentum efficitur. Suspendisse potenti. Nullam gravida neque ac tortor venenatis, vel auctor magna vestibulum. Ut sed nisi vel eros consequat feugiat. Donec nec dui sit amet elit fringilla feugiat. Suspendisse rutrum orci nec purus elementum, vel congue enim consequat. Integer eget felis risus. Sed eget vestibulum sapien, non accumsan magna. Ut eget arcu id nisi dapibus gravida.
+
+        Sed id tristique nisi. Vestibulum scelerisque, arcu vel ultricies viverra, sapien felis tincidunt turpis, vel consectetur elit sem id nisi. Donec sit amet sapien lectus. Phasellus eget ligula nec justo venenatis vestibulum. Praesent tempus enim libero, in fermentum ligula dapibus non. Fusce interdum nunc ut ex fringilla, sed ultricies turpis blandit. Aenean vel risus nec nisi euismod lacinia. Vestibulum sed elit erat. Suspendisse vel velit a mi posuere vehicula. Cras rutrum, sapien ac vehicula ultricies, est lorem tristique elit, vel condimentum nunc augue sit amet enim. Duis fermentum neque id metus malesuada, sed hendrerit lectus bibendum. Curabitur at urna nec nulla vehicula elementum sed sit amet urna.
+
+        Aliquam erat volutpat. Duis vehicula dapibus sem sed pretium. Proin sit amet sodales nisi. Suspendisse interdum metus ut elit malesuada feugiat. Nunc auctor, libero eget mollis interdum, eros justo tempor odio, sed elementum arcu sapien at erat. Vestibulum dictum, magna et aliquet lacinia, magna dolor gravida enim, nec malesuada metus nisl sed augue. Curabitur fermentum feugiat nulla, quis tincidunt ligula pellentesque id. Etiam fringilla velit vel augue congue, vitae vestibulum purus dictum. Vivamus convallis, libero id congue aliquet, ex nisi fermentum felis, sit amet rhoncus erat nisi at velit.
+
+        Nam dapibus urna ac venenatis vehicula. Nulla a augue at magna faucibus viverra. Integer sed urna vitae erat vestibulum malesuada. Sed fermentum fringilla leo, vel luctus orci pharetra in. Etiam non dictum eros. Duis tristique dui velit, vel tempus mauris condimentum at. Nam nec purus tincidunt, vehicula est quis, laoreet quam. Vivamus porttitor pharetra eros, nec elementum nisi. Ut sit amet tincidunt magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam volutpat diam quis nisl gravida pretium. Donec vestibulum nisl sit amet tellus faucibus tempor. Sed sagittis risus sit amet ex tincidunt, in vehicula mi gravida.
+
+        Vestibulum viverra, nisi quis scelerisque dictum, dolor sapien fermentum mi, in ultricies tortor urna non nisi. Donec luctus erat vel urna convallis, sed iaculis libero pellentesque. Proin feugiat purus at nisi aliquam convallis. Fusce malesuada elit in turpis sodales, vitae fermentum nisl malesuada. Nam quis molestie libero. Sed a bibendum nunc. Integer euismod erat sit amet mauris consectetur, nec blandit erat facilisis. Cras dictum consectetur lectus sed ultrices. Proin ut sagittis arcu. Suspendisse eu ipsum urna. Pellentesque et ligula quis elit vehicula suscipit a at mauris. Nam cursus nisl vel magna laoreet, vitae mollis magna ultrices. Nullam hendrerit, urna et aliquet tempus, lacus nisl consectetur ex, id luctus lorem tortor sit amet arcu.
+
+      </p>
+      <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eu metus fermentum efficitur. Suspendisse potenti. Nullam gravida neque ac tortor venenatis, vel auctor magna vestibulum. Ut sed nisi vel eros consequat feugiat. Donec nec dui sit amet elit fringilla feugiat. Suspendisse rutrum orci nec purus elementum, vel congue enim consequat. Integer eget felis risus. Sed eget vestibulum sapien, non accumsan magna. Ut eget arcu id nisi dapibus gravida.
+
+        Sed id tristique nisi. Vestibulum scelerisque, arcu vel ultricies viverra, sapien felis tincidunt turpis, vel consectetur elit sem id nisi. Donec sit amet sapien lectus. Phasellus eget ligula nec justo venenatis vestibulum. Praesent tempus enim libero, in fermentum ligula dapibus non. Fusce interdum nunc ut ex fringilla, sed ultricies turpis blandit. Aenean vel risus nec nisi euismod lacinia. Vestibulum sed elit erat. Suspendisse vel velit a mi posuere vehicula. Cras rutrum, sapien ac vehicula ultricies, est lorem tristique elit, vel condimentum nunc augue sit amet enim. Duis fermentum neque id metus malesuada, sed hendrerit lectus bibendum. Curabitur at urna nec nulla vehicula elementum sed sit amet urna.
+
+        Aliquam erat volutpat. Duis vehicula dapibus sem sed pretium. Proin sit amet sodales nisi. Suspendisse interdum metus ut elit malesuada feugiat. Nunc auctor, libero eget mollis interdum, eros justo tempor odio, sed elementum arcu sapien at erat. Vestibulum dictum, magna et aliquet lacinia, magna dolor gravida enim, nec malesuada metus nisl sed augue. Curabitur fermentum feugiat nulla, quis tincidunt ligula pellentesque id. Etiam fringilla velit vel augue congue, vitae vestibulum purus dictum. Vivamus convallis, libero id congue aliquet, ex nisi fermentum felis, sit amet rhoncus erat nisi at velit.
+
+        Nam dapibus urna ac venenatis vehicula. Nulla a augue at magna faucibus viverra. Integer sed urna vitae erat vestibulum malesuada. Sed fermentum fringilla leo, vel luctus orci pharetra in. Etiam non dictum eros. Duis tristique dui velit, vel tempus mauris condimentum at. Nam nec purus tincidunt, vehicula est quis, laoreet quam. Vivamus porttitor pharetra eros, nec elementum nisi. Ut sit amet tincidunt magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam volutpat diam quis nisl gravida pretium. Donec vestibulum nisl sit amet tellus faucibus tempor. Sed sagittis risus sit amet ex tincidunt, in vehicula mi gravida.
+
+        Vestibulum viverra, nisi quis scelerisque dictum, dolor sapien fermentum mi, in ultricies tortor urna non nisi. Donec luctus erat vel urna convallis, sed iaculis libero pellentesque. Proin feugiat purus at nisi aliquam convallis. Fusce malesuada elit in turpis sodales, vitae fermentum nisl malesuada. Nam quis molestie libero. Sed a bibendum nunc. Integer euismod erat sit amet mauris consectetur, nec blandit erat facilisis. Cras dictum consectetur lectus sed ultrices. Proin ut sagittis arcu. Suspendisse eu ipsum urna. Pellentesque et ligula quis elit vehicula suscipit a at mauris. Nam cursus nisl vel magna laoreet, vitae mollis magna ultrices. Nullam hendrerit, urna et aliquet tempus, lacus nisl consectetur ex, id luctus lorem tortor sit amet arcu.
+
+      </p>
+      <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eu metus fermentum efficitur. Suspendisse potenti. Nullam gravida neque ac tortor venenatis, vel auctor magna vestibulum. Ut sed nisi vel eros consequat feugiat. Donec nec dui sit amet elit fringilla feugiat. Suspendisse rutrum orci nec purus elementum, vel congue enim consequat. Integer eget felis risus. Sed eget vestibulum sapien, non accumsan magna. Ut eget arcu id nisi dapibus gravida.
+
+        Sed id tristique nisi. Vestibulum scelerisque, arcu vel ultricies viverra, sapien felis tincidunt turpis, vel consectetur elit sem id nisi. Donec sit amet sapien lectus. Phasellus eget ligula nec justo venenatis vestibulum. Praesent tempus enim libero, in fermentum ligula dapibus non. Fusce interdum nunc ut ex fringilla, sed ultricies turpis blandit. Aenean vel risus nec nisi euismod lacinia. Vestibulum sed elit erat. Suspendisse vel velit a mi posuere vehicula. Cras rutrum, sapien ac vehicula ultricies, est lorem tristique elit, vel condimentum nunc augue sit amet enim. Duis fermentum neque id metus malesuada, sed hendrerit lectus bibendum. Curabitur at urna nec nulla vehicula elementum sed sit amet urna.
+
+        Aliquam erat volutpat. Duis vehicula dapibus sem sed pretium. Proin sit amet sodales nisi. Suspendisse interdum metus ut elit malesuada feugiat. Nunc auctor, libero eget mollis interdum, eros justo tempor odio, sed elementum arcu sapien at erat. Vestibulum dictum, magna et aliquet lacinia, magna dolor gravida enim, nec malesuada metus nisl sed augue. Curabitur fermentum feugiat nulla, quis tincidunt ligula pellentesque id. Etiam fringilla velit vel augue congue, vitae vestibulum purus dictum. Vivamus convallis, libero id congue aliquet, ex nisi fermentum felis, sit amet rhoncus erat nisi at velit.
+
+        Nam dapibus urna ac venenatis vehicula. Nulla a augue at magna faucibus viverra. Integer sed urna vitae erat vestibulum malesuada. Sed fermentum fringilla leo, vel luctus orci pharetra in. Etiam non dictum eros. Duis tristique dui velit, vel tempus mauris condimentum at. Nam nec purus tincidunt, vehicula est quis, laoreet quam. Vivamus porttitor pharetra eros, nec elementum nisi. Ut sit amet tincidunt magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam volutpat diam quis nisl gravida pretium. Donec vestibulum nisl sit amet tellus faucibus tempor. Sed sagittis risus sit amet ex tincidunt, in vehicula mi gravida.
+
+        Vestibulum viverra, nisi quis scelerisque dictum, dolor sapien fermentum mi, in ultricies tortor urna non nisi. Donec luctus erat vel urna convallis, sed iaculis libero pellentesque. Proin feugiat purus at nisi aliquam convallis. Fusce malesuada elit in turpis sodales, vitae fermentum nisl malesuada. Nam quis molestie libero. Sed a bibendum nunc. Integer euismod erat sit amet mauris consectetur, nec blandit erat facilisis. Cras dictum consectetur lectus sed ultrices. Proin ut sagittis arcu. Suspendisse eu ipsum urna. Pellentesque et ligula quis elit vehicula suscipit a at mauris. Nam cursus nisl vel magna laoreet, vitae mollis magna ultrices. Nullam hendrerit, urna et aliquet tempus, lacus nisl consectetur ex, id luctus lorem tortor sit amet arcu.
+
+      </p>
+      <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet sapien eu metus fermentum efficitur. Suspendisse potenti. Nullam gravida neque ac tortor venenatis, vel auctor magna vestibulum. Ut sed nisi vel eros consequat feugiat. Donec nec dui sit amet elit fringilla feugiat. Suspendisse rutrum orci nec purus elementum, vel congue enim consequat. Integer eget felis risus. Sed eget vestibulum sapien, non accumsan magna. Ut eget arcu id nisi dapibus gravida.
+
+        Sed id tristique nisi. Vestibulum scelerisque, arcu vel ultricies viverra, sapien felis tincidunt turpis, vel consectetur elit sem id nisi. Donec sit amet sapien lectus. Phasellus eget ligula nec justo venenatis vestibulum. Praesent tempus enim libero, in fermentum ligula dapibus non. Fusce interdum nunc ut ex fringilla, sed ultricies turpis blandit. Aenean vel risus nec nisi euismod lacinia. Vestibulum sed elit erat. Suspendisse vel velit a mi posuere vehicula. Cras rutrum, sapien ac vehicula ultricies, est lorem tristique elit, vel condimentum nunc augue sit amet enim. Duis fermentum neque id metus malesuada, sed hendrerit lectus bibendum. Curabitur at urna nec nulla vehicula elementum sed sit amet urna.
+
+        Aliquam erat volutpat. Duis vehicula dapibus sem sed pretium. Proin sit amet sodales nisi. Suspendisse interdum metus ut elit malesuada feugiat. Nunc auctor, libero eget mollis interdum, eros justo tempor odio, sed elementum arcu sapien at erat. Vestibulum dictum, magna et aliquet lacinia, magna dolor gravida enim, nec malesuada metus nisl sed augue. Curabitur fermentum feugiat nulla, quis tincidunt ligula pellentesque id. Etiam fringilla velit vel augue congue, vitae vestibulum purus dictum. Vivamus convallis, libero id congue aliquet, ex nisi fermentum felis, sit amet rhoncus erat nisi at velit.
+
+        Nam dapibus urna ac venenatis vehicula. Nulla a augue at magna faucibus viverra. Integer sed urna vitae erat vestibulum malesuada. Sed fermentum fringilla leo, vel luctus orci pharetra in. Etiam non dictum eros. Duis tristique dui velit, vel tempus mauris condimentum at. Nam nec purus tincidunt, vehicula est quis, laoreet quam. Vivamus porttitor pharetra eros, nec elementum nisi. Ut sit amet tincidunt magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam volutpat diam quis nisl gravida pretium. Donec vestibulum nisl sit amet tellus faucibus tempor. Sed sagittis risus sit amet ex tincidunt, in vehicula mi gravida.
+
+        Vestibulum viverra, nisi quis scelerisque dictum, dolor sapien fermentum mi, in ultricies tortor urna non nisi. Donec luctus erat vel urna convallis, sed iaculis libero pellentesque. Proin feugiat purus at nisi aliquam convallis. Fusce malesuada elit in turpis sodales, vitae fermentum nisl malesuada. Nam quis molestie libero. Sed a bibendum nunc. Integer euismod erat sit amet mauris consectetur, nec blandit erat facilisis. Cras dictum consectetur lectus sed ultrices. Proin ut sagittis arcu. Suspendisse eu ipsum urna. Pellentesque et ligula quis elit vehicula suscipit a at mauris. Nam cursus nisl vel magna laoreet, vitae mollis magna ultrices. Nullam hendrerit, urna et aliquet tempus, lacus nisl consectetur ex, id luctus lorem tortor sit amet arcu.
+
+      </p>
     </div>
   );
 }
