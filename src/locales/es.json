@@ -1,0 +1,22 @@
+{
+    "home": {
+        "title": "Bienvenido a My Squad",
+        "description": "Explora nuestras características sin compromiso."
+    },
+    "user": {
+        "title": "Mi Perfil",
+        "loginTitle": "Iniciar sesión",
+        "welcome": "Bienvenido",
+        "signInWithGoogle": "Iniciar sesión con Google",
+        "logout": "Cerrar sesión"
+    },
+    "navigation": {
+        "logo": "MY SQUAD",
+        "home": "Inicio",
+        "profile": "Perfil",
+        "login": "Usuario"
+    },
+    "common": {
+        "languageSelector": "Idioma"
+    }
+}
