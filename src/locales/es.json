@@ -1,7 +1,15 @@
 {
     "home": {
-        "title": "Bienvenido a My Squad",
-        "description": "Explora nuestras características sin compromiso."
+        "title": "Bienvenido a MY SQUAD",
+        "description": "Explora nuestras características sin compromiso.",
+        "sections": {
+            "createTeam": "Crear Equipo",
+            "createTeamDescription": "Crea tu equipo y gestiona jugadores.",
+            "viewStats": "Ver Estadísticas",
+            "joinTeam": "Unirte a un Equipo",
+            "createLineup": "Crear Alineación",
+            "comingSoon": "Próximamente"
+        }
     },
     "user": {
         "title": "Mi Perfil",

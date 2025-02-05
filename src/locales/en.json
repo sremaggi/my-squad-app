@@ -1,7 +1,15 @@
 {
     "home": {
-        "title": "Welcome to My Squad",
-        "description": "Feel free to explore our features."
+        "title": "Welcome to MY SQUAD",
+        "description": "Feel free to explore our features.",
+        "sections": {
+            "createTeam": "Create Team",
+            "createTeamDescription": "Build your team and manage players.",
+            "viewStats": "View Stats",
+            "joinTeam": "Join a Team",
+            "createLineup": "Create Lineup",
+            "comingSoon": "Coming Soon"
+        }
     },
     "user": {
         "title": "My Profile",

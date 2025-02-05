@@ -37,7 +37,7 @@ export default function User() {
                 {/* Grid de Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {/* Card de Bienvenida o Login */}
-                    <Card>
+                    <Card padding={3}>
                         {!user ? (
                             <div className="text-center">
                                 <h2 className="text-xl font-semibold text-gray-700 mb-4">{t.loginTitle}</h2>
