@@ -14,20 +14,20 @@ export default function Navigation() {
         <nav className="navigation flex justify-between items-center p-4 text-white">
             {/* Logo */}
             <div className="flex items-center text-lg font-bold">
-                <Link href="/" className="hover:text-red-400 text-xl md:text-4xl">
+                <Link href="/" className="hover:text-orange-500 text-xl md:text-4xl">
                     {t.logo}
                 </Link>
             </div>
             {/* Navigation Buttons */}
             <div className="flex gap-5 items-center">
                 {/* Home Button */}
-                <Link href="/" className="nav-button hover:text-red-400">
+                <Link href="/" className="nav-button hover:text-orange-500">
                     <FaHome className="text-xl" />
                     <span className="text-xs md:text-sm">{t.home}</span>
                 </Link>
                 {/* User Profile or Login Button */}
                 {user ? (
-                    <Link href="/user" className="nav-button hover:text-red-400">
+                    <Link href="/user" className="nav-button hover:text-orange-500">
                         <img
                             src={user.photoURL}
                             alt="Foto de perfil"
@@ -36,7 +36,7 @@ export default function Navigation() {
                         <span className="text-xs md:text-sm">{t.profile}</span>
                     </Link>
                 ) : (
-                    <Link href="/user" className="nav-button hover:text-red-400">
+                    <Link href="/user" className="nav-button hover:text-orange-500">
                         <FaUserCircle className="text-2xl" />
                         <span className="text-xs md:text-sm">{t.login}</span>
                     </Link>

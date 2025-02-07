@@ -6,7 +6,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html >
       <body className="layout">
         {/* Proveedores globales */}
         <AuthProvider>

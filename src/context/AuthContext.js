@@ -2,6 +2,7 @@
 'use client'
 import { createContext, useContext, useState, useEffect } from 'react';
 import { auth, onAuthStateChanged } from '../utils/firebase';
+import LoadingSpinner from '@/components/LoadingSpinner';
 
 // Crear el contexto
 const AuthContext = createContext();
@@ -34,7 +35,11 @@ export const AuthProvider = ({ children }) => {
 
     // Si está cargando, muestra un indicador de carga
     if (loading) {
-        return <div>Cargando...</div>;
+        return (
+            <div className='flex justify-center items-center'>
+                <LoadingSpinner />
+            </div>
+        );
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

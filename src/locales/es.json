@@ -1,19 +1,20 @@
 {
     "home": {
         "title": "Bienvenido a MY SQUAD",
-        "description": "Explora nuestras características sin compromiso.",
+        "description": "Explora nuestras características libremente.",
         "sections": {
             "createTeam": "Crear Equipo",
             "createTeamDescription": "Crea tu equipo y gestiona jugadores.",
             "viewStats": "Ver Estadísticas",
-            "joinTeam": "Unirte a un Equipo",
+            "joinTeam": "Unirse a un Equipo",
+            "joinTeamDescription": "Encuentra equipos para unirte",
             "createLineup": "Crear Alineación",
             "comingSoon": "Próximamente"
         }
     },
     "user": {
         "title": "Mi Perfil",
-        "loginTitle": "Iniciar sesión",
+        "loginTitle": "Iniciar Sesión",
         "welcome": "Bienvenido",
         "signInWithGoogle": "Iniciar sesión con Google",
         "logout": "Cerrar sesión"
@@ -22,9 +23,30 @@
         "logo": "MY SQUAD",
         "home": "Inicio",
         "profile": "Perfil",
-        "login": "Usuario"
+        "login": "Iniciar Sesión"
     },
     "common": {
         "languageSelector": "Idioma"
+    },
+    "createTeam": {
+        "title": "Crear Equipo",
+        "teamName": "Nombre del Equipo",
+        "teamPhoto": "Foto del Equipo",
+        "uploadPhoto": "Subir Foto",
+        "players": "Jugadores",
+        "playerName": "Nombre/Alias",
+        "playerNumber": "N°",
+        "addPlayer": "Agregar Jugador",
+        "createTeamButton": "Crear Equipo",
+        "successMessage": "¡Equipo creado exitosamente!",
+        "errorMessage": "Ocurrió un error al crear el equipo.",
+        "errorMessageUser": "Debe iniciar sesión antes de crear un equipo."
+    },
+    "join-team": {
+        "title": "Únete a un Equipo",
+        "noTeamsAvailable": "No hay equipos disponibles.",
+        "adminLabel": "Administrador:",
+        "joinButton": "Unirse",
+        "loadMoreButton": "Cargar más"
     }
 }

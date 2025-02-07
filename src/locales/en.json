@@ -26,5 +26,26 @@
     },
     "common": {
         "languageSelector": "Language"
+    },
+    "createTeam": {
+        "title": "Create Team",
+        "teamName": "Team Name",
+        "teamPhoto": "Team Photo",
+        "uploadPhoto": "Upload Photo",
+        "players": "Players",
+        "playerName": "Name/Alias",
+        "playerNumber": "N°/SN",
+        "addPlayer": "Add Player",
+        "createTeamButton": "Create Team",
+        "successMessage": "Team created successfully!",
+        "errorMessage": "An error occurred while creating the team.",
+        "errorMessageUser": "You must log in before creating a team."
+    },
+    "join-team": {
+        "title": "Join a Team",
+        "noTeamsAvailable": "No teams available.",
+        "adminLabel": "Admin:",
+        "joinButton": "Join",
+        "loadMoreButton": "Load more"
     }
 }
