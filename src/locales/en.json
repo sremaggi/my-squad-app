@@ -30,17 +30,19 @@
     },
     "createTeam": {
         "title": "Create Team",
+        "createYourTeam": "Create Your Team",
+        "description": "Complete the form to create your team.",
         "teamName": "Team Name",
         "teamPhoto": "Team Photo",
         "uploadPhoto": "Upload Photo",
-        "players": "Players",
-        "playerName": "Name/Alias",
-        "playerNumber": "N°/SN",
-        "addPlayer": "Add Player",
+        "creationDate": "Creation Date",
+        "primaryColor": "Primary Color",
+        "secondaryColor": "Secondary Color",
+        "selectColor": "Select Color",
         "createTeamButton": "Create Team",
-        "successMessage": "Team created successfully!",
-        "errorMessage": "An error occurred while creating the team.",
-        "errorMessageUser": "You must log in before creating a team."
+        "successMessage": "Team created successfully.",
+        "errorMessage": "There was an error creating the team.",
+        "errorMessageUser": "You must be logged in to create a team."
     },
     "join-team": {
         "title": "Join a Team",

@@ -10,26 +10,23 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
 import TitleSubtitle from "@/components/TitleSubtitle";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import DatePicker from "react-datepicker"; // Date picker elegante
+import "react-datepicker/dist/react-datepicker.css"; // Estilos para el date picker
+import { HexColorPicker } from "react-colorful"; // Color picker elegante
 
 const CreateTeam = () => {
     const [teamName, setTeamName] = useState("");
-    const [players, setPlayers] = useState([{ id: Date.now(), name: "", number: "" }]);
     const [teamPhoto, setTeamPhoto] = useState(null);
+    const [creationDate, setCreationDate] = useState(new Date()); // Fecha de creación
+    const [primaryColor, setPrimaryColor] = useState("#ffffff"); // Color principal
+    const [secondaryColor, setSecondaryColor] = useState("#000000"); // Color secundario
+    const [showPrimaryPicker, setShowPrimaryPicker] = useState(false); // Control del color picker primario
+    const [showSecondaryPicker, setShowSecondaryPicker] = useState(false); // Control del color picker secundario
     const [loading, setLoading] = useState(false);
     const router = useRouter();
     const { user } = useAuth();
     const { language, translations } = useContext(LanguageContext);
     const t = translations[language].createTeam;
-
-    const addPlayer = () => {
-        setPlayers([...players, { id: Date.now(), name: "", number: "" }]);
-    };
-
-    const updatePlayer = (id, field, value) => {
-        setPlayers(
-            players.map((player) => (player.id === id ? { ...player, [field]: value } : player))
-        );
-    };
 
     const createTeam = async () => {
         try {
@@ -50,6 +47,7 @@ const CreateTeam = () => {
                 alert("Team name is empty.");
                 return;
             }
+
             let photoUrl = null;
             if (teamPhoto) {
                 const response = await fetch(teamPhoto);
@@ -57,24 +55,17 @@ const CreateTeam = () => {
                 const storageRef = ref(storage, `teamPhotos/${Date.now()}`);
                 await uploadBytes(storageRef, blob);
                 photoUrl = await getDownloadURL(storageRef);
+            } else {
+                alert("Photo is empty.");
+                return;
             }
             const teamDocRef = await addDoc(collection(db, "teams"), {
                 name: teamName,
                 admin: user.email,
-                players: players.map(({ name, number }) => ({ name, number })),
                 photoUrl,
-            });
-            const teamId = teamDocRef.id;
-            players.forEach(async (player) => {
-                await addDoc(collection(db, "players"), {
-                    id: player.id.toString(),
-                    team_id: [teamId],
-                    name: player.name,
-                    number: player.number,
-                    matches_played: [],
-                    photo: null,
-                    preferred_positions: [],
-                });
+                creationDate: creationDate.toISOString(), // Guardamos la fecha en formato ISO
+                primaryColor, // Guardamos el color principal
+                secondaryColor, // Guardamos el color secundario
             });
             alert(t.successMessage);
             router.push("/my-teams");
@@ -134,13 +125,13 @@ const CreateTeam = () => {
                                     maxNumber={1}
                                 >
                                     {({ imageList, onImageUpload }) => (
-                                        <div>
+                                        <div className="flex flex-col items-center">
                                             {imageList.length > 0 ? (
-                                                <img src={imageList[0].dataURL} alt="Team" className="w-40 h-40 object-cover rounded mx-auto" />
+                                                <img src={imageList[0].dataURL} alt="Team" className="w-40 h-40 object-cover rounded mx-auto mb-2" />
                                             ) : (
                                                 <button
                                                     onClick={onImageUpload}
-                                                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
+                                                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full"
                                                 >
                                                     {t.uploadPhoto}
                                                 </button>
@@ -150,38 +141,65 @@ const CreateTeam = () => {
                                 </ImageUploading>
                             </div>
                             <div className="mb-4">
-                                <h3 className="text-lg font-bold mb-2">{t.players}</h3>
-                                {players.map((player, index) => (
-                                    < div key={player.id} className="bg-gray-300 p-3 mb-2 rounded-md">
-                                        <div className="flex items-center mb-2 max-w-md ">
-                                            <input
-                                                type="text"
-                                                placeholder={t.playerName}
-                                                value={player.name}
-                                                onChange={(e) => updatePlayer(player.id, "name", e.target.value)}
-                                                className="flex-1 border border-gray-300 rounded p-2 mr-2 focus:outline-none focus:border-blue-500"
-                                            />
-
-                                        </div>
-                                        <div className="flex items-center mb-2 max-w-md ">
-
-                                            <input
-                                                type="text"
-                                                placeholder={t.playerNumber}
-                                                value={player.number}
-                                                onChange={(e) => updatePlayer(player.id, "number", e.target.value)}
-                                                className="w-20 border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500"
-                                            />
-                                        </div>
-                                    </div>
-                                ))}
+                                <label className="block text-gray-700 font-bold mb-2">{t.creationDate}</label>
+                                <DatePicker
+                                    selected={creationDate}
+                                    onChange={(date) => setCreationDate(date)}
+                                    dateFormat="yyyy/MM/dd"
+                                    className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:border-blue-500"
+                                />
                             </div>
-                            <button
-                                onClick={addPlayer}
-                                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mb-4 w-full"
-                            >
-                                {t.addPlayer}
-                            </button>
+                            {/* Colores en dos columnas */}
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                {/* Color primario */}
+                                <div className="flex flex-col items-center">
+                                    <button
+                                        onClick={() => setShowPrimaryPicker(!showPrimaryPicker)}
+                                        className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded mb-2 text-xs md:text-sm"
+                                    >
+                                        {t.primaryColor}
+                                    </button>
+                                    <div
+                                        style={{ backgroundColor: primaryColor }}
+                                        className="w-8 h-8 rounded border border-gray-300 mb-2"
+                                    ></div>
+                                    {showPrimaryPicker && (
+                                        <div className="flex flex-col items-center">
+                                            <HexColorPicker color={primaryColor} onChange={setPrimaryColor} />
+                                            <input
+                                                type="text"
+                                                value={primaryColor}
+                                                onChange={(e) => setPrimaryColor(e.target.value)}
+                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                                {/* Color secundario */}
+                                <div className="flex flex-col items-center">
+                                    <button
+                                        onClick={() => setShowSecondaryPicker(!showSecondaryPicker)}
+                                        className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded mb-2 text-xs md:text-sm"
+                                    >
+                                        {t.secondaryColor}
+                                    </button>
+                                    <div
+                                        style={{ backgroundColor: secondaryColor }}
+                                        className="w-8 h-8 rounded border border-gray-300 mb-2"
+                                    ></div>
+                                    {showSecondaryPicker && (
+                                        <div className="flex flex-col items-center">
+                                            <HexColorPicker color={secondaryColor} onChange={setSecondaryColor} />
+                                            <input
+                                                type="text"
+                                                value={secondaryColor}
+                                                onChange={(e) => setSecondaryColor(e.target.value)}
+                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                             <button
                                 onClick={createTeam}
                                 className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full mt-4"

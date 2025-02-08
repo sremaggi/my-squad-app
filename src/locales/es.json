@@ -30,18 +30,20 @@
         "languageSelector": "Idioma"
     },
     "createTeam": {
-        "title": "Crear Equipo",
-        "teamName": "Nombre del Equipo",
-        "teamPhoto": "Foto del Equipo",
-        "uploadPhoto": "Subir Foto",
-        "players": "Jugadores",
-        "playerName": "Nombre/Alias",
-        "playerNumber": "N°",
-        "addPlayer": "Agregar Jugador",
-        "createTeamButton": "Crear Equipo",
-        "successMessage": "¡Equipo creado exitosamente!",
-        "errorMessage": "Ocurrió un error al crear el equipo.",
-        "errorMessageUser": "Debe iniciar sesión antes de crear un equipo."
+        "title": "Crear equipo",
+        "createYourTeam": "Crea tu equipo",
+        "description": "Completa el formulario para crear tu equipo.",
+        "teamName": "Nombre del equipo",
+        "teamPhoto": "Foto del equipo",
+        "uploadPhoto": "Subir foto",
+        "creationDate": "Fecha de creación",
+        "primaryColor": "Color principal",
+        "secondaryColor": "Color secundario",
+        "selectColor": "Seleccionar color",
+        "createTeamButton": "Crear equipo",
+        "successMessage": "Equipo creado exitosamente.",
+        "errorMessage": "Hubo un error al crear el equipo.",
+        "errorMessageUser": "Debes iniciar sesión para crear un equipo."
     },
     "join-team": {
         "title": "Únete a un Equipo",
