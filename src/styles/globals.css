@@ -60,10 +60,12 @@ main {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png);
 }
 
+/* Asegura que el nav ocupe todo el ancho disponible */
 .navigation {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    /* Separa los elementos izquierdos y derechos */
     padding: 15px;
     color: white;
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/papyrus-dark.png);
@@ -72,35 +74,27 @@ main {
     box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para los botones de navegación */
 .nav-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra horizontalmente */
     justify-content: center;
-    /* Centra verticalmente */
     text-align: center;
-    /* Asegura que el texto esté centrado */
 }
 
 .nav-button>* {
     line-height: 1;
-    /* Asegura que el texto no tenga un espacio extra */
     margin: 0;
-    /* Elimina cualquier margen predeterminado */
 }
 
 .nav-button img,
 .nav-button svg {
     width: 24px;
-    /* Tamaño fijo para íconos e imágenes */
     height: 24px;
-    /* Asegura que todos tengan la misma altura */
 }
 
 .nav-button span {
     margin-top: 3px;
-    /* Espacio uniforme entre el ícono/imagen y el texto */
     font-size: 12px;
-    /* Tamaño de fuente consistente */
 }

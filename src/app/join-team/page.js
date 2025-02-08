@@ -18,9 +18,9 @@ const JoinTeam = () => {
             try {
                 let q;
                 if (lastVisible) {
-                    q = query(collection(db, "teams"), startAfter(lastVisible), limit(5));
+                    q = query(collection(db, "teams"), startAfter(lastVisible), limit(3));
                 } else {
-                    q = query(collection(db, "teams"), limit(5));
+                    q = query(collection(db, "teams"), limit(3));
                 }
                 const querySnapshot = await getDocs(q);
                 const teamsData = querySnapshot.docs.map((doc) => ({

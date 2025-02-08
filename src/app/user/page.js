@@ -1,5 +1,6 @@
 'use client'; // Necesario para usar hooks y funciones interactivas
 import { useContext } from 'react';
+import Link from 'next/link'; // Para manejar las rutas
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useAuth } from '../../context/AuthContext';
 import { auth, provider, signInWithPopup, signOut } from '../../utils/firebase';
@@ -66,10 +67,18 @@ export default function User() {
                                 {/* Botón de cerrar sesión */}
                                 <button
                                     onClick={handleLogout}
-                                    className="w-full py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-300"
+                                    className="w-full py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-300 mb-4"
                                 >
                                     {t.logout}
                                 </button>
+                                {/* Botón para ir a Mis Equipos */}
+                                <Link href="/my-teams" className=''>
+                                    <button
+                                        className="w-full p-3  bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300"
+                                    >
+                                        {t.goToMyTeams}
+                                    </button>
+                                </Link>
                             </div>
                         )}
                         {/* Selector de idioma */}

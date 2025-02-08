@@ -16,7 +16,8 @@
         "loginTitle": "Login",
         "welcome": "Welcome",
         "signInWithGoogle": "Sign in with Google",
-        "logout": "Log out"
+        "logout": "Log out",
+        "goToMyTeams": "My Teams"
     },
     "navigation": {
         "logo": "MY SQUAD",

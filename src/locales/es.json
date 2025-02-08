@@ -17,7 +17,8 @@
         "loginTitle": "Iniciar Sesión",
         "welcome": "Bienvenido",
         "signInWithGoogle": "Iniciar sesión con Google",
-        "logout": "Cerrar sesión"
+        "logout": "Cerrar sesión",
+        "goToMyTeams": "Mis Equipos"
     },
     "navigation": {
         "logo": "MY SQUAD",

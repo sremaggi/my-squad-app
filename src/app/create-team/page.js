@@ -59,7 +59,6 @@ const CreateTeam = () => {
                 photoUrl = await getDownloadURL(storageRef);
             }
             const teamDocRef = await addDoc(collection(db, "teams"), {
-                id: Date.now().toString(),
                 name: teamName,
                 admin: user.email,
                 players: players.map(({ name, number }) => ({ name, number })),
@@ -153,21 +152,27 @@ const CreateTeam = () => {
                             <div className="mb-4">
                                 <h3 className="text-lg font-bold mb-2">{t.players}</h3>
                                 {players.map((player, index) => (
-                                    <div key={player.id} className="flex items-center mb-2">
-                                        <input
-                                            type="text"
-                                            placeholder={t.playerName}
-                                            value={player.name}
-                                            onChange={(e) => updatePlayer(player.id, "name", e.target.value)}
-                                            className="flex-1 border border-gray-300 rounded p-2 mr-2 focus:outline-none focus:border-blue-500"
-                                        />
-                                        <input
-                                            type="text"
-                                            placeholder={t.playerNumber}
-                                            value={player.number}
-                                            onChange={(e) => updatePlayer(player.id, "number", e.target.value)}
-                                            className="w-20 border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500"
-                                        />
+                                    < div key={player.id} className="bg-gray-300 p-3 mb-2 rounded-md">
+                                        <div className="flex items-center mb-2 max-w-md ">
+                                            <input
+                                                type="text"
+                                                placeholder={t.playerName}
+                                                value={player.name}
+                                                onChange={(e) => updatePlayer(player.id, "name", e.target.value)}
+                                                className="flex-1 border border-gray-300 rounded p-2 mr-2 focus:outline-none focus:border-blue-500"
+                                            />
+
+                                        </div>
+                                        <div className="flex items-center mb-2 max-w-md ">
+
+                                            <input
+                                                type="text"
+                                                placeholder={t.playerNumber}
+                                                value={player.number}
+                                                onChange={(e) => updatePlayer(player.id, "number", e.target.value)}
+                                                className="w-20 border border-gray-300 rounded p-2 focus:outline-none focus:border-blue-500"
+                                            />
+                                        </div>
                                     </div>
                                 ))}
                             </div>
