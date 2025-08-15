@@ -45,7 +45,7 @@ const MyTeams = () => {
     return (
         <div className="p-6 flex flex-col items-center ">
             {/* Encabezado */}
-            <h1 className="text-3xl font-bold text-center text-white mb-8">Mis Equipos</h1>
+            <h1 className="text-3xl font-bold text-center text-white mb-8 ">Mis Equipos</h1>
 
             {/* Contenido principal */}
             <div className="flex-grow ">

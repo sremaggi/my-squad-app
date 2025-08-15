@@ -10,26 +10,27 @@ export default function Home() {
   const t = translations[language].home;
 
   return (
-    <div className="p-4">
+    <div className="p-2 min-h-full flex flex-col justify-center">
       {/* Título y subtítulo */}
       <TitleSubtitle
         title={t.title}
         subtitle={t.description}
-
       />
 
       {/* Contenedor centrado con un ancho máximo */}
-      <div className="max-w-screen-lg mx-auto">
-        {/* Grid de tarjetas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="max-w-screen-lg mx-auto w-full">
+        {/* Grid de tarjetas centradas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-items-center">
           {HomeCards.map((card, index) => (
-            <Card key={index}>
+            <Card key={index} className="w-full">
               <a href={card.link} className="block">
                 {/* Imagen */}
                 <img
                   src={card.image}
                   alt={t.sections[card.titleKey]}
-                  className={`w-full h-28 md:h-48 object-cover rounded-t-lg ${card.descriptionKey === 'comingSoon' ? 'opacity-50 grayscale' : ''
+                  className={`w-full h-28 md:h-48 object-cover rounded-t-lg ${card.descriptionKey === 'comingSoon'
+                    ? 'opacity-50 grayscale'
+                    : ''
                     }`}
                 />
                 {/* Contenido */}
@@ -37,7 +38,12 @@ export default function Home() {
                   <h3 className="text-sm md:text-xl font-semibold text-gray-800 mb-2">
                     {t.sections[card.titleKey]}
                   </h3>
-                  <p className={`text-gray-600 text-sm md:text-base ${card.descriptionKey === 'comingSoon' ? 'italic text-sm' : ''}`}>
+                  <p
+                    className={`text-gray-600 text-sm md:text-base ${card.descriptionKey === 'comingSoon'
+                      ? 'italic text-sm'
+                      : ''
+                      }`}
+                  >
                     {t.sections[card.descriptionKey]}
                   </p>
                 </div>
