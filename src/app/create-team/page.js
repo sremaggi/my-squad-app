@@ -13,6 +13,7 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import DatePicker from "react-datepicker"; // Date picker elegante
 import "react-datepicker/dist/react-datepicker.css"; // Estilos para el date picker
 import { HexColorPicker } from "react-colorful"; // Color picker elegante
+import { FaCheck, FaCalendar, FaRegCalendar, FaCalendarDay } from 'react-icons/fa';
 
 const CreateTeam = () => {
     const [teamName, setTeamName] = useState("");
@@ -127,7 +128,13 @@ const CreateTeam = () => {
                                     {({ imageList, onImageUpload }) => (
                                         <div className="flex flex-col items-center">
                                             {imageList.length > 0 ? (
-                                                <img src={imageList[0].dataURL} alt="Team" className="w-40 h-40 object-cover rounded mx-auto mb-2" />
+                                                <div className="flex flex-col">
+                                                    <div className="flex justify-center">
+                                                        <FaCheck className="text-green-500" />
+                                                    </div>
+
+                                                    <p>{t.successImageMessage}</p>
+                                                </div>
                                             ) : (
                                                 <button
                                                     onClick={onImageUpload}
@@ -142,12 +149,16 @@ const CreateTeam = () => {
                             </div>
                             <div className="mb-4">
                                 <label className="block text-gray-700 font-bold mb-2">{t.creationDate}</label>
-                                <DatePicker
-                                    selected={creationDate}
-                                    onChange={(date) => setCreationDate(date)}
-                                    dateFormat="yyyy/MM/dd"
-                                    className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:border-blue-500"
-                                />
+                                <div className="flex justify-center items-center">
+                                    <FaCalendarDay className="mr-3 text-sky-700 text-xl" />
+                                    <DatePicker
+                                        selected={creationDate}
+                                        onChange={(date) => setCreationDate(date)}
+                                        dateFormat="dd-MM-yyyy"
+                                        className="border border-gray-300 rounded p-2 w-full focus:outline-none focus:border-blue-500"
+                                    />
+                                </div>
+
                             </div>
                             {/* Colores en dos columnas */}
                             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -160,6 +171,7 @@ const CreateTeam = () => {
                                         {t.primaryColor}
                                     </button>
                                     <div
+                                        onClick={() => setShowPrimaryPicker(!showPrimaryPicker)}
                                         style={{ backgroundColor: primaryColor }}
                                         className="w-8 h-8 rounded border border-gray-300 mb-2"
                                     ></div>
@@ -170,7 +182,7 @@ const CreateTeam = () => {
                                                 type="text"
                                                 value={primaryColor}
                                                 onChange={(e) => setPrimaryColor(e.target.value)}
-                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500"
+                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500 text-xs"
                                             />
                                         </div>
                                     )}
@@ -184,6 +196,7 @@ const CreateTeam = () => {
                                         {t.secondaryColor}
                                     </button>
                                     <div
+                                        onClick={() => setShowSecondaryPicker(!showSecondaryPicker)}
                                         style={{ backgroundColor: secondaryColor }}
                                         className="w-8 h-8 rounded border border-gray-300 mb-2"
                                     ></div>
@@ -194,7 +207,7 @@ const CreateTeam = () => {
                                                 type="text"
                                                 value={secondaryColor}
                                                 onChange={(e) => setSecondaryColor(e.target.value)}
-                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500"
+                                                className="border border-gray-300 rounded p-2 w-full mt-2 focus:outline-none focus:border-blue-500 text-xs"
                                             />
                                         </div>
                                     )}

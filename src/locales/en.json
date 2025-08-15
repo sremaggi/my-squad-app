@@ -36,13 +36,14 @@
         "teamPhoto": "Team Photo",
         "uploadPhoto": "Upload Photo",
         "creationDate": "Creation Date",
-        "primaryColor": "Primary Color",
-        "secondaryColor": "Secondary Color",
+        "primaryColor": "Primary",
+        "secondaryColor": "Secondary",
         "selectColor": "Select Color",
         "createTeamButton": "Create Team",
         "successMessage": "Team created successfully.",
         "errorMessage": "There was an error creating the team.",
-        "errorMessageUser": "You must be logged in to create a team."
+        "errorMessageUser": "You must be logged in to create a team.",
+        "successImageMessage": "Upload Image Successful"
     },
     "join-team": {
         "title": "Join a Team",

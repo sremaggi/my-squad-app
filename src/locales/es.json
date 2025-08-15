@@ -43,7 +43,8 @@
         "createTeamButton": "Crear equipo",
         "successMessage": "Equipo creado exitosamente.",
         "errorMessage": "Hubo un error al crear el equipo.",
-        "errorMessageUser": "Debes iniciar sesión para crear un equipo."
+        "errorMessageUser": "Debes iniciar sesión para crear un equipo.",
+        "successImageMessage": "Imagen cargada correctamente."
     },
     "join-team": {
         "title": "Únete a un Equipo",

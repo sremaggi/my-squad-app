@@ -15,6 +15,7 @@ export default function Home() {
       <TitleSubtitle
         title={t.title}
         subtitle={t.description}
+
       />
 
       {/* Contenedor centrado con un ancho máximo */}

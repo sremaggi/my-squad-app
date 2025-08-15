@@ -7,6 +7,7 @@ import { auth, provider, signInWithPopup, signOut } from '../../utils/firebase';
 import Card from '../../components/Card';
 import { FcGoogle } from 'react-icons/fc';
 import { LanguageContext } from '@/context/LanguageContext';
+import TitleSubtitle from '@/components/TitleSubtitle';
 
 export default function User() {
     const { user } = useAuth(); // Acceder al estado global del usuario
@@ -34,13 +35,14 @@ export default function User() {
             {/* Contenedor principal */}
             <div className="max-w-2xl w-full">
                 {/* Título principal */}
-                <h1 className="text-3xl text-center text-gray-800 mb-8">{t.title}</h1>
+                <TitleSubtitle title={t.loginTitle} textWite={true} />
                 {/* Grid de Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {/* Card de Bienvenida o Login */}
                     <Card padding={3}>
                         {!user ? (
                             <div className="text-center">
+
                                 <h2 className="text-xl font-semibold text-gray-700 mb-4">{t.loginTitle}</h2>
                                 <button
                                     onClick={handleGoogleLogin}

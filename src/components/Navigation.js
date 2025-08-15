@@ -1,7 +1,7 @@
 'use client'; // Necesario para usar hooks
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'; // Para manejar la navegación "Go Back"
-import { FaHome, FaUser, FaUserCircle, FaArrowLeft } from 'react-icons/fa';
+import { FaHome, FaUserCircle, FaArrowLeft } from 'react-icons/fa';
 import { useAuth } from '@/context/AuthContext';
 import { useContext } from 'react';
 import { LanguageContext } from '@/context/LanguageContext';
